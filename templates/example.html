@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel='stylesheet'>
+  
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  <style>
+body.blu {
+    color: #27AE60;
+}
+
+h4.blu {
+    color: #27AE60;
+}
+h4.rd {
+    color: red;
+}
+div.lnk{
+	position: absolute;
+	width: 40%;
+	left: 50%;
+	margin-left: -20%;
+}
+</style>
+
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand navbar-brand-img" href="#">
+          
+          <img alt="Deloitte-logo" src="{{url_for('static', filename='styles/Deloitte-logo.png')}}" class="brand-logo" />
+
+      <div class="navbar-brand centre">
+      <strong>AIM Data 2.0 File Upload Utility</strong>
+    </div>
+        </a>
+  </nav><br><br><br>
+
+
+
+
+<title>Example Template!</title>
+
+{% if msgRet %}
+<h4 style="text-align:center"> Upload Status <h4> 
+<h4 class="blu" style="text-align:center">{{ msgRet }}</h4>
+{% elif text1 %}
+<h4 style="text-align:center;"> Upload Status <h4> 
+<h4 class="blu" style="text-align:center">{{ text1 }}</h4>
+{% else %}
+<h4 style="text-align:center"> Upload Status<h4>
+<h4 class="blu" style="text-align:center">No Files uploaded</h4>
+{% endif %}
+<br><br><br>
+
+	<form class="form-horizontal" method=POST enctype=multipart/form-data action="/jobsRun">
+     <div class="form-group">
+      <div class="col-sm-10">          
+        <h5 class="control-label col-sm-6" for="pwd"></h5>
+        <input type="submit" value="Start Jobs" name="example" class="btn btn-info" enabled="">
+       
+     </form>
+      </div>
+     
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-sm-6">  
+<a href= "{{ url_for('upload') }}"> Back Home</a>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel='stylesheet'>
+  
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  <style>
+body.blu {
+    color: #27AE60;
+}
+
+h4.blu {
+    color: #27AE60;
+}
+h4.rd {
+    color: red;
+}
+div.lnk{
+	position: absolute;
+	width: 40%;
+	left: 50%;
+	margin-left: -20%;
+}
+</style>
+
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand navbar-brand-img" href="#">
+          
+          <img alt="Deloitte-logo" src="{{url_for('static', filename='styles/Deloitte-logo.png')}}" class="brand-logo" />
+
+      <div class="navbar-brand centre">
+      <strong>Data 2.0 Framework Demo</strong>
+    </div>
+        </a>
+  </nav><br><br><br>
+
+
+
+
+<title>View Results</title>
+
+
+<h4 class="blu" style="text-align:center"> Following Files generated .... <h4><br>
+<h4 style="text-align:center">1. TSel - Data Feeds - Detailed Analysis.xlsx </h4>
+<h4 style="text-align:center">2. profiler/ </h4>
+<h4 style="text-align:center">3. scripty/ </h4>
+
+
+<title>Path: {{ tree.name }}</title>
+
+
+<h5>{{ tree.name }}</h5>
+<ul>
+{%- for item in tree.children recursive %}
+    <li><a href="{{ item.name }}">{{ item.name }}</a>
+    {%- if item.children -%}
+        <ul><a href={{ loop(item.children) }}</a></ul>
+    {%- endif %}</li>
+{%- endfor %}
+</ul>
+
+<br><br><br>
+
+	<form class="form-horizontal" method=POST enctype=multipart/form-data action="/results">
+     <div class="form-group">
+      <div class="col-ss-4">          
+        <h5 class="control-label col-sm-5" for="pwd"></h5>
+        <input type="submit" value="Download Files" name="fileDownload" class="btn btn-info col-ss-4" enabled="">
+       
+     </form>
+      </div>
+     
+     
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-sm-4">  
+<a href= "{{ url_for('upload') }}"> Back Home</a>
+</div>
+
+
+
+</body>
+</html>

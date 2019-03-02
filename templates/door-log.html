@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+
+<!--
+
+
+
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Event</th>
+    </tr>
+
+    {% for row in range(events) %}
+        <tr>
+            {% for column in range(3) %}
+            <td> {{ door_history[row][column] }} </td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+-->
+
+{% if events %}
+<h4 style="text-align:center"> Upload Status <h4> 
+<h4 class="blu" style="text-align:center">{{ events }}</h4>
+
+{% else %}
+<h4 style="text-align:center"> Upload Status<h4>
+<h4 class="blu" style="text-align:center">No Files uploaded</h4>
+{% endif %}

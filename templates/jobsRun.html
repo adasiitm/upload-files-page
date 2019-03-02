@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel='stylesheet'>
+  
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  <style>
+body.blu {
+    color: #27AE60;
+}
+
+h4.blu {
+    color: #27AE60;
+}
+h4.rd {
+    color: red;
+}
+div.lnk{
+	position: absolute;
+	width: 40%;
+	left: 50%;
+	margin-left: -20%;
+}
+</style>
+
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand navbar-brand-img" href="#">
+          
+          <img alt="Deloitte-logo" src="{{url_for('static', filename='styles/Deloitte-logo.png')}}" class="brand-logo" />
+
+      <div class="navbar-brand centre">
+      <strong>Data 2.0 Framework Demo</strong>
+    </div>
+        </a>
+  </nav><br><br><br>
+
+
+
+
+<title>Jobs Run Template!</title>
+
+
+<h4 class="blu" style="text-align:center"> Following jobs ran successfully .... <h4>
+	<h6 style="text-align:center"> Please scroll below to view results <h6>
+<pre>
+{{ text }}
+</pre>
+
+	<form class="form-horizontal" method=POST enctype=multipart/form-data action="/results">
+     <div class="form-group">
+      <div class="col-ss-4">          
+        <h5 class="control-label col-sm-5" for="pwd"></h5>
+        <input type="submit" value="View Results" name="results" class="btn btn-info col-ss-4" enabled="">
+       
+     </form>
+      </div>
+     
+     
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-sm-4">  
+<a href= "{{ url_for('upload') }}"> Back Home</a>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+input[type=file] {
+  display: inline;
+  margin-right: 10px;
+}
+input[type=submit] {
+  margin-right: 10px;
+}
+#upload-form-fields{
+  display: inline;
+}
+.center {
+    text-align: left;
+    
+    height: 5px;
+    padding: 70px;
+}
+.bar {
+  background-color: #B4F5B4;
+  width: 0%;
+  border-radius: 3px;
+  height: 20px;
+}
+.select{
+  padding: 5px 20px;
+  width: 20%;
+}
+.filter-scale{
+  opacity:10;
+  cursor: not-allowed;
+  margin-right: 200px;
+}
+.select-text{
+  font-size: 20px;
+}
+.section-spaces{
+  padding: 70px 0;
+}
+.percent {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+.progress{
+  width: 39%;
+  margin: auto;
+}
+#status{
+  margin-top: 30px;
+  word-wrap: break-word;
+  text-align: center;
+}
+.brand-logo{
+  max-width: 140px;
+}
+.navbar-default {
+  background-color: #eee9e9;
+}
+.navbar-brand-img{
+  padding: 10px 15px;
+}
+.btn-info{
+  width: 210px;
+  margin-bottom: 50px;
+}
+.multiple-tabs{
+  margin-top: 28px;
+}
+@media(max-width: 768px){
+  .full-width-xs{
+    width: 100%;
+  }
+}

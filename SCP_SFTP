@@ -1,0 +1,324 @@
+ssh.connect('das@13.76.3.225:~/')
+
+with SCPClient(ssh.get_transport()) as scp:
+    scp.put('upload.py')
+
+
+scp upload.py das@13.76.3.225:~/
+
+
+ssh.connect(hostname=13.76.3.225 username=das password=AbhijitDas$22 port=22)
+
+def send_file(password):
+    global config
+    
+    cnopts = pysftp.CnOpts()
+    cnopts.hostkeys = None
+    
+    try:
+        with pysftp.Connection(config["hostname"], username = config["username"], password = password, port = config["port"], cnopts = cnopts) as sftp:
+            sftp.chdir(config["remoteDir"])
+            sftp.put(config["imgPath"])
+        print("File uploaded")
+    except:
+        print(traceback.format_exc()) 
+        ============================================================================
+
+        sudo apt-get install sshpass
+        try:
+    p = subprocess.Popen(
+    ['sshpass','-p',password,'ssh', '-s', '-l', '<name1>', <host_name>, '-p', str(port), '<something>'],
+    bufsize=BUFSIZE,
+    stdin=subprocess.PIPE,
+    stdout=subprocess.PIPE,
+    stderr=subprocess.STDOUT,
+    shell=False)
+except Exception, err:
+    print 'Failed to run ssh command! (' + str(err) + ')'
+    sys.exit()
+
+
+    ./python_script.py ssh device@ip_address passwd
+
+    ==================================================================================
+    passwordless login
+    ssh-keygen
+    ssh-copy-id das@13.76.3.225
+    ssh 'das@13.76.3.225'
+
+    scp readme.md das@13.76.3.225:~/
+    https://winscp.net/eng/docs/commandline
+
+    scp $USER@$HOST:/$DIRECTORY/file.zip .
+
+FILE = sshsetup.sh
+scp $FILE das@13.76.3.225:~/
+
+scp upload.py das@13.76.3.225:~/
+scp /templates/upload.html das@13.76.3.225:~/
+scp -r data2_FileUploadUtility das@13.76.3.225:~/
+
+Deloitte VM:
+scp -r data2_FileUploadUtility cdhadmin@13.76.159.168:~/
+Deloitte@123
+
+/home/cdhadmin/Lean2.1/docker/Documents
+scp -r cdhadmin@13.76.159.168:~/ .
+scp cdhadmin@13.76.159.168:~/data2_FileUploadUtility/uploadBKP.py .
+http://13.76.3.225:80
+
+
+320
+HTTPS
+443
+TCP
+Any
+Any
+Allow
+…
+340
+HTTP
+80
+TCP
+Any
+Any
+Allow
+…
+360
+SSH
+22
+Any
+Any
+Any
+Allow
+…
+
+Usage:
+sudo /etc/init.d/apache2 stop
+sudo python upload.py
+
+Please install following:
+from flask import Flask, render_template, request, redirect
+from flask_uploads import UploadSet, configure_uploads, DATA, url_for
+from werkzeug import secure_filename
+import os
+import sh
+import shutil
+
+
+os.system('chmod 777 -R *')
+os.chmod(path, 0o7777)
+os.chmod(dst, mode) 
+
+os.chmod(file, 0o0777)
+
+chmod -R 777 .
+sudo chmod -f 777 /path/to/your/file/or/directory
+I have to use -f also.
+
+sudo chmod -R -f 777 /path/to/your/file/or/directory
+
+
+try 
+sudo python3 -m pip install scapy
+sudo -i 
+
+sudo nohup python upload.py > 1.txt 2>&1 &
+(Change the python link for Azure VM)
+ps -ef | grep upload.py
+sudo ~/miniconda3/bin/python upload.py
+
+[cdhadmin@data20serverpkd etc]$ cd init.d
+[cdhadmin@data20serverpkd init.d]$ ls
+README  functions  netconsole  network  start_data20_upload_util
+[cdhadmin@data20serverpkd init.d]$ more start_data20_upload_util
+#! /bin/bash
+#
+# network       Bring up/down networking
+#
+# chkconfig: 2345 10 90
+# description: Activates/Deactivates all network interfaces configured to \
+#              start at boot time.
+#
+/home/cdhadmin/miniconda3/bin/python /home/cdhadmin/data2_FileUploadUtility/upload.py
+[cdhadmin@data20serverpkd init.d]$ pwd
+/etc/init.d
+[cdhadmin@data20serverpkd init.d]$ 
+
+os.system('su -c "/home/das/data2_FileUploadUtility/testScript.sh" das') 
+
+/home/cdhadmin/Orchestrator/FilePoller/TriggerDir/Pending/Orchestrator_Trigger.txt
+
+/home/cdhadmin/data2_FileUploadUtility/Orchestrator_Trigger.txt
+
+
+with open(r'/home/cdhadmin/data2_FileUploadUtility/Orchestrator_Trigger.txt', 'w') as f:
+f.save(r'/home/cdhadmin/Orchestrator/FilePoller/TriggerDir/Pending/', Orchestrator_Trigger.txt )
+        return render_template('example.html', msgRet=msgRet)
+
+scp cdhadmin@13.76.159.168:~/data2_FileUploadUtility/uploadBKP.py .
+scp upload.py cdhadmin@13.76.159.168:~/data2_FileUploadUtility/
+
+shutil.copyfile(r'/home/cdhadmin/data2_FileUploadUtility/Orchestrator_Trigger.txt', r'/home/cdhadmin/Orchestrator/FilePoller/TriggerDir/Pending/Orchestrator_Trigger.txt)
+
+/home/cdhadmin/Orchestrator/FilePoller
+
+
+'''@app.route('/example', methods=['POST'])
+def next_item():
+    if request.method == 'POST':
+        import os.path
+        import os
+        msgRet = "Now inside other function"
+    
+    return render_template('example.html', msgRet=msgRet, text1=str(text1))  
+
+@app.route("/test" , methods=['POST', 'GET'])
+def test():
+    text = request.form.get('OptionSelected')
+    return(str(text))'''
+
+@app.route('/example', methods=['GET', 'POST'])
+def jobsRun():
+
+    if request.method == 'POST' and request.form.get('runJobs') == 'Next':
+        msgRet= "Inside Example html page & jobsRun route"
+        #return msgRet
+        return render_template('jobsRun.html', msgRet=msgRet)
+    return render_template('example.html')
+
+'''@app.route('/stream')
+def jobsRun():
+    def generate():
+        with open(r'/Users/das/data2.0/data2_FileUploadUtility/log.txt') as f:
+            while True:
+                yield f.read()
+                sleep(1)
+
+    return app.response_class(generate(), mimetype='text/plain')    
+'''
+
+
+
+'''@app.route('/stream', methods=['GET'])
+def stream():
+    def generate():
+        with open(r'/Users/das/data2.0/data2_FileUploadUtility/log.txt') as f:
+            while True:
+                yield f.read()
+                sleep(1)
+
+    return app.response_class(generate(), mimetype='text/plain')  
+
+@app.route('/stream', methods=['POST', 'GET'])
+def history():
+    if request.method == 'POST':
+        def generate():
+            logfile = open(r'/Users/das/data2.0/data2_FileUploadUtility/log.txt',"r")
+            logfile.seek(0,0)
+            while True:
+                line = logfile.readline()
+                if not line:
+                    time.sleep(1)
+                    continue
+                yield (line)
+        return app.response_class(generate(), mimetype='text/plain')    
+        #return render_template('door-log.html', events=generate())
+'''
+<title>Path: {{ tree.name }}</title>
+
+
+<h5>{{ tree.name }}</h5>
+<ul>
+{%- for item in tree.children recursive %}
+    <li><a href="{{ item.name }}">{{ item.name }}</a>
+    {%- if item.children -%}
+        <ul><a href="{{ loop(item.children) }}">{{ loop(item.children) }}</a></ul>
+    {%- endif %}</li>
+{%- endfor %}
+
+
+import os.path
+import time
+
+while not os.path.exists(file_path):
+    time.sleep(1)
+
+if os.path.isfile(file_path):
+    # read file
+else:
+    raise ValueError("%s isn't a file!" % file_path)
+
+import os.path
+import time
+file_path=r'/Users/das/data2.0/data2_FileUploadUtility/log.txt'
+while not os.path.exists(file_path):
+    time.sleep(1)
+
+if os.path.isfile(file_path):
+    logfile = open(r'/Users/das/data2.0/data2_FileUploadUtility/log.txt',"r")
+    content = logfile.read()
+    print(content)
+else:
+    print("Not found")
+
+@app.route('/jobsRun', methods=['GET', 'POST'])
+def jobsRun():
+    if request.method == 'POST' and request.form.get('example') == 'Next':
+        #shutil.copyfile(r'/home/cdhadmin/data2_FileUploadUtility/Orchestrator_Trigger.txt', r'/home/cdhadmin/Orchestrator/FilePoller/TriggerDir/Pending/Orchestrator_Trigger.txt')
+        shutil.copyfile(r'/Users/das/data2.0/data2_FileUploadUtility/Orchestrator_Trigger.txt', r'/Users/das/data2.0/data2_FileUploadUtility/Uploaded_Files/Orchestrator_Trigger.txt')
+        file_path=r'/Users/das/data2.0/data2_FileUploadUtility/log1.txt'
+        while not os.path.exists(file_path):
+            time.sleep(2)
+            if os.path.isfile(file_path):
+                logfile = open(file_path,"r")
+                content = logfile.read()
+                
+            
+        return render_template('jobsRun.html', text=content)
+    return render_template('example.html')
+
+@app.route('/jobsRun', methods=['GET', 'POST'])
+def jobsRun():
+    if request.method == 'POST' and request.form.get('example') == 'Next':
+        #shutil.copyfile(r'/home/cdhadmin/data2_FileUploadUtility/Orchestrator_Trigger.txt', r'/home/cdhadmin/Orchestrator/FilePoller/TriggerDir/Pending/Orchestrator_Trigger.txt')
+        shutil.copyfile(r'/Users/das/data2.0/data2_FileUploadUtility/Orchestrator_Trigger.txt', r'/Users/das/data2.0/data2_FileUploadUtility/Uploaded_Files/Orchestrator_Trigger.txt')
+        sleep(2)
+        text = open('Dashboard_Log.log', 'r+')
+        content = text.read()
+        text.close()
+        return render_template('jobsRun.html', text=content)
+    return render_template('example.html')
+
+@app.route("/<file_name>")
+def getFile(file_name):
+    return send_from_directory(folder, file_name, as_attachment=True)    
+
+
+if __name__ == '__main__':
+    app.run(host = '0.0.0.0', port=80, debug=True)
+
+
+
+    <form action="/download_success" method="POST">
+        
+        
+        
+        <input type="submit" value="Download", name="Downloading">
+      </form> 
+
+
+      <h4 style="text-align:center">1. TSel - Data Feeds - Detailed Analysis.xlsx </h4>
+<h4 style="text-align:center">2. profiler/ </h4>
+<h4 style="text-align:center">3. scripty/ </h4>
+
+
+
+<form class="form-horizontal" method=POST enctype=multipart/form-data action="/jobsRun">
+     <div class="form-group">
+      <div class="col-sm-4">          
+        <h5 class="control-label col-sm-4" for="pwd">Start the jobs</h5>
+        <input type="submit" value="Next" name="example" class="btn btn-info" enabled="">
+       
+     </form>
+      </div>

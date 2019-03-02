@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel='stylesheet'>
+  
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  <style>
+body.blu {
+    color: #27AE60;
+}
+
+h4.blu {
+    color: #27AE60;
+}
+h4.rd {
+    color: red;
+}
+div.lnk{
+	position: absolute;
+	width: 40%;
+	left: 50%;
+	margin-left: -20%;
+}
+</style>
+
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand navbar-brand-img" href="#">
+          
+          <img alt="Deloitte-logo" src="{{url_for('static', filename='styles/Deloitte-logo.png')}}" class="brand-logo" />
+
+      <div class="navbar-brand centre">
+      <strong>AIM Data 2.0 File Upload Utility</strong>
+    </div>
+        </a>
+  </nav><br><br><br>
+
+
+
+
+<title>Example Template!</title>
+<h4 style="text-align:center"> Files Downloaded: /Download/Download.zip <h4>
+<h4 style="text-align:center"> Upload Status <h4> 
+
+<a href="{{ url_for('database_download', filename=filename) }}">Download Files</a>
+
+<br><br><br>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="col-sm-4">  
+<a href= "{{ url_for('upload') }}"> Back Home</a>
+</div>
+
+
+
+</body>
+</html>

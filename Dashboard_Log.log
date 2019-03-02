@@ -1,0 +1,40 @@
+20180912T101237164********** Started Execution - Data20_Master_v1.sh
+
+20180912T101237170********** Log File Path set to /home/cdhadmin/Orchestrator/Logs/Data20_Log_20180912T1012.log
+
+20180912T101237176********** Started Executing Lean Profiler (By Raj/Alvin) Script
+[FATAL tini (7)] exec ./lmprofiler failed: No such file or directory
+python: can't open file '/docker/Scripts/prepsheet_modified_final.py': [Errno 2] No such file or directory
+20180912T101239223********** Ended Executing Lean Profiler (By Raj/Alvin) Script
+
+20180912T101239229********** Started Executing Lean Profiler Data 2.0 Enhancement (By Appala Raju) Script
+20180912T101239294********** Ended Executing Lean Profiler Data 2.0 Enhancement (By Appala Raju) Script
+
+20180912T101239300********** Started Executing Big Data DDL/DML Script Generator (By Raj) Script
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+./temp_clear.sh: line 1: rm: command not found
+./temp_clear.sh: line 2: mkdir: command not found
+./temp_clear.sh: line 4: mv: command not found
+./temp_clear.sh: line 5: mv: command not found
+./temp_clear.sh: line 6: mv: command not found
+./run-scripty.sh: line 2: cp: command not found
+[NbConvertApp] Converting notebook Notebooks/TSel-Script-Generator-v12.ipynb to html
+[NbConvertApp] Executing notebook with kernel: python3
+[NbConvertApp] Writing 649392 bytes to Notebooks/TSel-Script-Generator-v12.html
+20180912T101302560********** Ended Executing Big Data DDL/DML Script Generator (By Raj) Script
+
+20180912T101302566********** Started Executing Big Data DDL/DML Script Uploader (By AppalaRaju) Script
+20180912T101302771********** Ended Executing Big Data DDL/DML Script Uploader (By AppalaRaju) Script
+
+20180912T101302776********** Started Executing Big Data DDL/DML Script Executor (By AppalaRaju) Script
+20180912T101302796********** Ended Executing Big Data DDL/DML Script Executor (By AppalaRaju) Script
+
+20180912T101302802********** Started Executing  job status  Script Executor (By AppalaRaju) Script
+20180912T101302864********** Ended Executing  job status Script  Executor (By AppalaRaju) Script
+
+20180912T101302870********** Completed Execution - Data20_Master_v1.sh
+
+
+
